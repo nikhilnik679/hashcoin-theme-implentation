@@ -53,6 +53,46 @@
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
 
+{# Navbar #}
+{#{% if page.mythememenu or page.navigation_collapsible %}#}
+{#  {% block navbar %}#}
+{#    {%#}
+{#      set navbar_classes = [#}
+{#      'navbar',#}
+{#      theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',#}
+{#      theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,#}
+{#    ]#}
+{#    %}#}
+{#    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">#}
+{#      {% if not navbar_attributes.hasClass(container) %}#}
+{#      <div class="{{ container }}">#}
+{#        {% endif %}#}
+{#        <div class="navbar-header">#}
+{#          {{ page.mythememenu }}#}
+{#          #}{# .btn-navbar is used as the toggle for collapsed navbar content #}
+{#          {% if page.navigation_collapsible %}#}
+{#            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">#}
+{#              <span class="sr-only">{{ 'Toggle navigation'|t }}</span>#}
+{#              <span class="icon-bar"></span>#}
+{#              <span class="icon-bar"></span>#}
+{#              <span class="icon-bar"></span>#}
+{#            </button>#}
+{#          {% endif %}#}
+{#        </div>#}
+
+{#        #}{# Navigation (collapsible) #}
+{#        {% if page.navigation_collapsible %}#}
+{#          <div id="navbar-collapse" class="navbar-collapse collapse">#}
+{#            {{ page.navigation_collapsible }}#}
+{#          </div>#}
+{#        {% endif %}#}
+{#        {% if not navbar_attributes.hasClass(container) %}#}
+{#      </div>#}
+{#      {% endif %}#}
+{#    </header>#}
+{#  {% endblock %}#}
+{#{% endif %}#}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
@@ -72,6 +112,7 @@
         <div id="mythememenu" class="content">
 	        {{ page.mythememenu }}
 	      </div>
+        <div id="menu-bar-collapse" ></div>
       {% endif %}
 
       {# Content #}
@@ -100,6 +141,13 @@
         {{ page.footer }}
       </footer>
     {% endblock %}
+  {% endif %}
+
+  {# COPYRIGHT FOOTER #}
+  {% if page.page_bottom1 %}
+    <div id="bottom_copyright" class="content">
+      {{ page.page_bottom1 }}
+    </div>
   {% endif %}
 
 {% endblock %}

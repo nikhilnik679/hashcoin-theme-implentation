@@ -266,7 +266,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'Dnlapb6M30QlaA97Qcf6NjSiAguTpw7t_YkhZKUeS4zkgYKvD5kcEz2DZRY7iu8tfqvAgbxNug';
 
 /**
  * Deployment identifier.
@@ -769,4 +769,14 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
 //error_reporting(E_ALL);
 //ini_set('display_errors', TRUE);
 //ini_set('display_startup_errors', TRUE);
-$settings["config_sync_directory"] = "../../config";
+$settings["config_sync_directory"] = "config";
+$databases['default']['default'] = array (
+  'database' => 'coin',
+  'username' => 'root',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);

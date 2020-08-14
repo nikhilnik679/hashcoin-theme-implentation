@@ -10,8 +10,10 @@ package: 'Bootstrap'
 regions:
   header: 'Header'
   mythememenu: 'Navigation'
+#  navigation_collapsible: 'Navigation (Collapsible)'
   content: 'Content'
   footer: 'Footer'
+  page_bottom1: 'Page bottom'
 
 
 libraries:
