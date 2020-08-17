@@ -1165,7 +1165,7 @@ progress {
 .form-textarea-wrapper {
   margin-top: 30px;
   margin-bottom: -30px;
-  padding-right: 48px;
+  padding-right: 45px;
   position: relative;
 }
 
@@ -1897,7 +1897,6 @@ select{
     border: none;
     min-width: 160px;
     letter-spacing: 0.1em;
-
   }
 }
 
@@ -2007,14 +2006,13 @@ select{
 @media (min-width: 768px) and (max-width: 992px) {
   #block-webform-2 {
     background-position: right center;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
   #edit-elements {
-    padding-left: 0px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin-right: 2%;
-    margin-left: 5%;
-    padding-right: 5px;
+    margin-right: -10%;
+    margin-left: 6%;
+    padding: 2.5em !important;
   }
   #webform-submission-contact-node-3-add-form .form-group{
     margin-bottom: 1px;
@@ -2029,6 +2027,11 @@ select{
     text-align: center;
     min-width: 160px;
   }
+  #edit-flexbox--2 .js-form-item-email::after{
+    top: 41%;
+    left: 85%;
+  }
+
 }
 
 /*  clients block  */
@@ -2343,8 +2346,8 @@ letter-spacing: 0;
   #edit-elements {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
@@ -2427,6 +2430,10 @@ letter-spacing: 0;
     bottom: 6px;
     left: 50%;
     font-weight: 700;
+  }
+
+  p:last-child, .form-group:last-child, .panel:last-child {
+    margin-bottom: -75px;
   }
 
 }
