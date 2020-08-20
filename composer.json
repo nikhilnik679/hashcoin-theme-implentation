@@ -37,7 +37,8 @@
         "drupal/token": "^1.7",
         "drupal/views_slideshow": "^4.7",
         "drupal/webform": "^5.19",
-        "drupal/webform_extra_field": "^1.0@alpha"
+        "drupal/webform_extra_field": "^1.0@alpha",
+        "drupal/webform_views": "^5.0@alpha"
     },
     "require-dev": {
         "kint-php/kint": "^3.3"
